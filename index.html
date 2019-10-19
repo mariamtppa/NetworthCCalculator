@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<link rel="stylesheet" type="text/css" href="calculator.css">
+    	<script src="calculator.js"></script>
+    	<title>Calculate Your Networth</title>
+    </head>
+    <body>
+        <div id="image">
+            <nav id="nav">
+                <div id="logo-div">FINANCE</div>
+                <ul id="menu">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+            
+        <form id="data">
+            <h3>NETWORTH CALCULATOR</h3>
+            <h5>Quickly add the value of your portfolio, assets and liabilities and get your networth</h5>
+            <div id="calculator">
+                <div id="assets">
+	                <p>Assets</p>
+	                <hr class="rule">
+
+                    <div class="extra">
+	                    <div class="entry"><label for="home">Your home</label><input class= "change" type="text" id="0" placeholder=" Enter asset value" onfocusout="calculateWorth(this, 'assets')"></div>
+
+	                    <div class="entry"><label>Shares</label><input class= "change" type="text" id="1" placeholder=" Enter asset value" onfocusout="calculateWorth(this, 'assets')"></div>
+
+	                    <div class="entry"><label>Savings</label><input class= "change" type="text" id="2" placeholder=" Enter asset value" onfocusout="calculateWorth(this, 'assets')"></div>
+
+	                    <div class="entry"><label>Trusts</label><input id='3' class= "change" type="text" placeholder=" Enter asset value" onfocusout="calculateWorth(this, 'assets')"></div>
+
+	                    <div id="moreAssets" class="addItems"><button type="button" onclick="moreAssetsOrLiabilities('assets')">Add item</button></div>
+
+	                    <div id="totalAssets"> YOUR TOTAL ASSETS IS: #<span id="justAssets"></span></div>
+                    </div>
+                </div>
+
+                <div id="liabilities">
+	                <p>Liabilities</p>
+	                <hr class="rule">
+
+                    <div class="extra">
+	                    <div class="entry"><label>Student Loan</label><input id="4" class= "change" type="text" placeholder=" Enter liability value" onfocusout="calculateWorth(this, 'liabilities')"></div>
+
+	                    <div class="entry"><label>Home mortgage</label><input id="5" class= "change" type="text" placeholder=" Enter liability value" onfocusout="calculateWorth(this, 'liabilities')"></div>
+
+	                    <div class="entry"><label>Credit card debit</label><input id="6" class= "change" type="text" placeholder=" Enter liability value" onfocusout="calculateWorth(this, 'liabilities')"></div>
+
+                        <div class="entry"><label>Car Loan</label><input id="7" class= "change" type="text" placeholder=" Enter liability value" onfocusout="calculateWorth(this, 'liabilities')"></div>
+
+
+                        <div id="moreLiabilities" class="addItems"><button type="button" onclick="moreAssetsOrLiabilities('liabilities')">Add item</button></div>
+
+                        <div id="totalLiabilities"> YOUR TOTAL LIABILITIES IS: #<span id="justLiabilities"></span></div>
+                    </div>
+                </div>
+            </div>
+
+                <p id="displayWorth">YOUR NETWORTH IS: #<span id="worth"></span></p>
+                <div id="reset-div"><button type="button" id="reset" onclick= "Reset()">reset</button></div>
+                <div id="storeData-div"><button id="storeData" type="submit">keep record</button></div>
+        </form>
+        <footer>&copy; Finance</footer>
+    </body>
+</html>
